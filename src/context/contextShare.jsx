@@ -4,14 +4,14 @@ export const addResponseContext = createContext({});
 export const editProjectResponse = createContext({});
 export const loginResponseContext = createContext({});
 export const paymentResponseContext = createContext({});
-export const deleteBookingContext = createContext({}); // Added Delete Booking Context
+export const deleteBookingContext = createContext({}); 
 
 function ContextShare({ children }) {
     const [addResponse, setAddResponse] = useState([]);
     const [editResponse, setEditResponse] = useState([]);
     const [loginResponse, setLoginResponse] = useState(true);
     const [paymentResponse, setPaymentResponse] = useState(null);
-    const [deleteBookingResponse, setDeleteBookingResponse] = useState(null); // Delete Booking State
+    const [deleteBookingResponse, setDeleteBookingResponse] = useState(null); 
 
     return (
         <addResponseContext.Provider value={{ addResponse, setAddResponse }}>
